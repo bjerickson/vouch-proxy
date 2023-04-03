@@ -85,7 +85,7 @@ func (Provider) GetUserInfo(r *http.Request, user *structs.User, customClaims *s
 
 	azureUser.PrepareUserData()
 
-	user.Username = azureUser.Username
+	user.Username = azureUser.Email
 	user.Name = azureUser.Name
 	user.Email = azureUser.Email
 	log.Infof("azure GetUserInfo: User: %+v", user)
